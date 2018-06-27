@@ -28,6 +28,9 @@ import { TooltipComponent } from './tooltip/tooltip.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
+import { FileUploadModule } from 'ng2-file-upload';
+import { VideitosComponent } from './videitos/videitos.component';
+import { SubirVideosComponent } from './subir-videos/subir-videos.component';
 
 @NgModule({
   imports: [
@@ -38,7 +41,8 @@ import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    CdkTableModule
+    CdkTableModule,
+    FileUploadModule
   ],
   providers: [
     
@@ -64,7 +68,9 @@ import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
     TooltipComponent,
     SnackbarComponent,
     SliderComponent,
-    SlideToggleComponent  
+    SlideToggleComponent,
+    VideitosComponent,
+    SubirVideosComponent  
   ]
 })
 

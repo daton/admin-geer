@@ -27,19 +27,23 @@ export interface Menu {
 const MENUITEMS = [
     {
         state: 'starter',
-        name: 'Starter Page',
+        name: 'Principal',
         type: 'link',
-        icon: 'content_copy'
+        icon: 'account_circle'
     }, 
     {
         state: 'material',
-        name: 'Material Ui',
+        name: 'Contenido',
         type: 'sub',
         icon: 'bubble_chart',
         badge: [
-            {type: 'red', value: '17'}
+            {type: 'red', value: '2'}
         ],
         children: [
+          {state:'subir-videos',name:'Subir videos'},
+            {state: 'videos', name: 'Mis Videos'}
+         
+            /*
             {state: 'button', name: 'Buttons'},
             {state: 'cards', name: 'Cards'},
             {state: 'grid', name: 'Grid List'},
@@ -56,7 +60,9 @@ const MENUITEMS = [
             {state: 'tooltip', name: 'Tooltip'},
             {state: 'snackbar', name: 'Snackbar'},
             {state: 'slider', name: 'Slider'},
-            {state: 'slide-toggle', name: 'Slide Toggle'}     
+            {state: 'slide-toggle', name: 'Slide Toggle'}    
+            
+            */
         ]
     } 
 ];
