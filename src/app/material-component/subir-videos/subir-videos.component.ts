@@ -17,13 +17,13 @@ export class SubirVideosComponent implements AfterViewInit{
   public curso:string="eeeel";
   public hasAnotherDropZoneOver:boolean = false;
  //URL = 'http://192.168.100.7:9000/api/archivaldo';
- URL = 'https://env-8787020.j.layershift.co.uk/api/archivaldo';
+ URL = 'https://node74674-env-8686050.whelastic.net/api/archivaldo';
 
  public uploader:FileUploader = new FileUploader({url: this.URL});
 
  materias = [
-  {value: 'info2', viewValue: 'Informática 2'},
-  {value: 'info4', viewValue: 'Informática 4'},
+  {value: 'info1', viewValue: 'Informática 1'},
+  {value: 'info3', viewValue: 'Informática 3'},
 
 ];
 bloques = [
@@ -37,7 +37,6 @@ cursos = [
   {value: 'word', viewValue: 'Word'},
   {value: 'internet', viewValue: 'Internet'},
   {value: 'power', viewValue: 'Power Point'},
-  {value: 'access', viewValue: 'Access'},
   {value: 'programacion', viewValue: 'Programación'}
 ];
  public constructor(){

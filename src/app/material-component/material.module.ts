@@ -32,6 +32,11 @@ import { FileUploadModule } from 'ng2-file-upload';
 import { VideitosComponent } from './videitos/videitos.component';
 import { SubirVideosComponent } from './subir-videos/subir-videos.component';
 
+import {VgCoreModule} from 'videogular2/core';
+import {VgControlsModule} from 'videogular2/controls';
+import {VgOverlayPlayModule} from 'videogular2/overlay-play';
+import {VgBufferingModule} from 'videogular2/buffering';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -42,7 +47,8 @@ import { SubirVideosComponent } from './subir-videos/subir-videos.component';
     ReactiveFormsModule,
     FlexLayoutModule,
     CdkTableModule,
-    FileUploadModule
+    FileUploadModule,
+    VgCoreModule,VgControlsModule,VgOverlayPlayModule,VgBufferingModule
   ],
   providers: [
     
