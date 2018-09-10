@@ -19,6 +19,7 @@ import { SliderComponent } from './slider/slider.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 import { VideitosComponent } from './videitos/videitos.component';
 import { SubirVideosComponent } from './subir-videos/subir-videos.component';
+import { ProfesoresComponent } from './profesores/profesores.component';
 
 
 export const MaterialRoutes: Routes = [
@@ -28,6 +29,10 @@ export const MaterialRoutes: Routes = [
       {
         path: 'subir-videos',
         component: SubirVideosComponent
+      },
+      {
+  path:'profesores',
+  component:ProfesoresComponent
       },
       {
         path: 'videos',

@@ -36,6 +36,8 @@ import {VgCoreModule} from 'videogular2/core';
 import {VgControlsModule} from 'videogular2/controls';
 import {VgOverlayPlayModule} from 'videogular2/overlay-play';
 import {VgBufferingModule} from 'videogular2/buffering';
+import { ProfesoresComponent } from './profesores/profesores.component';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 @NgModule({
   imports: [
@@ -48,7 +50,8 @@ import {VgBufferingModule} from 'videogular2/buffering';
     FlexLayoutModule,
     CdkTableModule,
     FileUploadModule,
-    VgCoreModule,VgControlsModule,VgOverlayPlayModule,VgBufferingModule
+    VgCoreModule,VgControlsModule,VgOverlayPlayModule,VgBufferingModule,
+    NgxDatatableModule
   ],
   providers: [
     
@@ -76,7 +79,8 @@ import {VgBufferingModule} from 'videogular2/buffering';
     SliderComponent,
     SlideToggleComponent,
     VideitosComponent,
-    SubirVideosComponent  
+    SubirVideosComponent,
+    ProfesoresComponent  
   ]
 })
 
