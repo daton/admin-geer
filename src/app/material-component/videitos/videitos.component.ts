@@ -18,7 +18,7 @@ export class VideitosComponent implements OnInit {
   @ViewChild('videoPlayer') videoPlayer:any;
 
 
-videourl="http://static.videogular.com/assets/videos/videogular.mp4";
+videourl="https://geducativoedi.com.mx/intro.mp4";
 
   materias = [
     {value: 'info1', viewValue: 'Informática 1'},
@@ -36,7 +36,8 @@ videourl="http://static.videogular.com/assets/videos/videogular.mp4";
     {value: 'word', viewValue: 'Word'},
     {value: 'internet', viewValue: 'Internet'},
     {value: 'power', viewValue: 'Power Point'},
-    {value: 'programacion', viewValue: 'Programación'}
+    {value: 'programacion', viewValue: 'Programación'},
+    {value: 'scracht', viewValue: ' Programación Scracht'}
   ];
 
   constructor(private fb: FormBuilder, private router: Router) {}

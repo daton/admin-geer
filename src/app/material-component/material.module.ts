@@ -38,10 +38,12 @@ import {VgOverlayPlayModule} from 'videogular2/overlay-play';
 import {VgBufferingModule} from 'videogular2/buffering';
 import { ProfesoresComponent } from './profesores/profesores.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { MatPaginatorModule, MatSortModule, MatTableModule } from '@angular/material';
 
 @NgModule({
   imports: [
     CommonModule,
+    MatSortModule,
     RouterModule.forChild(MaterialRoutes),
     DemoMaterialModule,
     HttpModule,
@@ -51,7 +53,8 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     CdkTableModule,
     FileUploadModule,
     VgCoreModule,VgControlsModule,VgOverlayPlayModule,VgBufferingModule,
-    NgxDatatableModule
+    MatTableModule,
+    NgxDatatableModule,MatPaginatorModule
   ],
   providers: [
     

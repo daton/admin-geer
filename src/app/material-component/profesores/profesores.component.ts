@@ -1,6 +1,8 @@
-import { Component, OnInit ,ViewChild} from '@angular/core';
+import { Component, OnInit ,ViewChild, AfterViewInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Globales } from '../../modelo/globales';
+import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
+import { Profesor } from '../../modelo/profesor';
 
 declare var require: any;
 //const data: any = require('assets/company.json');
@@ -9,33 +11,30 @@ declare var require: any;
   templateUrl: './profesores.component.html',
   styleUrls: ['./profesores.component.css']
 })
-export class ProfesoresComponent implements OnInit {
-  editing = {};
-  rows = [];
-  data:any[]
-  temp = this.data;
+export class ProfesoresComponent implements OnInit, AfterViewInit {
+  displayedColumns = ['clave', 'email', 'nombre', 'paterno'];
+  dataSource: MatTableDataSource<Profesor>;
+   users: Profesor[] = [];
+color='blue'
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
-  loadingIndicator = true;
-  reorderable = true;
-
-  columns = [{ prop: 'nombre' }, { name: 'clave' }, { name: 'email' }];
-  @ViewChild(ProfesoresComponent) table: ProfesoresComponent;
   constructor(public http:HttpClient) {
 
     let estaUrl: string = Globales.urlBase + "/profesor";
     console.log("La es esta  url" + estaUrl);
-    this.http.get<any[]>(estaUrl).subscribe(respuesta => { this.data = respuesta });
-
+    this.http.get<any[]>(estaUrl).subscribe(respuesta => { this.users = respuesta });
+    this.dataSource = new MatTableDataSource(this.users);
 
 
    // this.rows = data;
    // this.temp = [...data];
     setTimeout(() => {
+         // Assign the data to the data source for the table to render
+         this.dataSource = new MatTableDataSource(this.users);
+         this.dataSource.paginator = this.paginator;
+         this.dataSource.sort = this.sort;
 
-      this.rows = this.data;
-    this.temp = [this.data];
-    console.log("Tamano "+this.rows.length)
-      this.loadingIndicator = false;
     }, 1500);
   
 
@@ -43,7 +42,17 @@ export class ProfesoresComponent implements OnInit {
 
   ngOnInit() {
   }
-  updateFilter(event) {
-    const val = event.target.value.toLowerCase();
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+  }
+
+  applyFilter(filterValue: string) {
+    filterValue = filterValue.trim(); // Remove whitespace
+    filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+    this.dataSource.filter = filterValue;
+  }
+  jaja(){
+    console.log(" jajajaja");
   }
 }

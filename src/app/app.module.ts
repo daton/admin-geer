@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
 import { LoginComponent } from './autenticacion/login/login.component';
+import { MatTableModule, MatSortModule } from '@angular/material';
 
 
 @NgModule({
@@ -41,6 +42,8 @@ import { LoginComponent } from './autenticacion/login/login.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    MatTableModule,
+    MatSortModule,
     SharedModule,  
     RouterModule.forRoot(AppRoutes)  
   ],

@@ -37,7 +37,8 @@ cursos = [
   {value: 'word', viewValue: 'Word'},
   {value: 'internet', viewValue: 'Internet'},
   {value: 'power', viewValue: 'Power Point'},
-  {value: 'programacion', viewValue: 'Programación'}
+  {value: 'programacion', viewValue: 'Programación'},
+  {value: 'scracht', viewValue: 'Programación Scracht'}
 ];
  public constructor(){
  
