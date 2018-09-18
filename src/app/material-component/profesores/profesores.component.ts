@@ -52,7 +52,7 @@ color='blue'
     filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
     this.dataSource.filter = filterValue;
   }
-  jaja(){
-    console.log(" jajajaja");
+  jaja(valor:string){
+    console.log(" jajajaja"+ valor);
   }
 }

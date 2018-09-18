@@ -13,13 +13,14 @@
   
                         <!-- ID Column -->
                         <ng-container matColumnDef="clave">
-                            <mat-header-cell *matHeaderCellDef mat-sort-header> Clave </mat-header-cell>
+                            <mat-header-cell *matHeaderCellDef mat-sort-header>Autorizar por Clave</mat-header-cell>
                             <mat-cell *matCellDef="let row">
-                                    <button mat-button (click)="jaja()">
-                                            <mat-icon>delete</mat-icon>
+                                    <button mat-button (click)="jaja(row.clave)">
+                                            <mat-icon>contact_mail</mat-icon>
+                                              {{row.clave}}
                                         </button>    
                                 
-                                {{row.clave}} </mat-cell>
+                              </mat-cell>
                         </ng-container>
   
                         <!-- Progress Column -->
