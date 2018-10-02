@@ -20,12 +20,19 @@ import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 import { VideitosComponent } from './videitos/videitos.component';
 import { SubirVideosComponent } from './subir-videos/subir-videos.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
+import { AlumnosComponent } from './alumnos/alumnos.component';
 
 
 export const MaterialRoutes: Routes = [
   {
     path: '',
     children: [
+
+{
+path:'alumnos',
+component:AlumnosComponent
+},
+
       {
         path: 'subir-videos',
         component: SubirVideosComponent

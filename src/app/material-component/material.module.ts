@@ -39,6 +39,7 @@ import {VgBufferingModule} from 'videogular2/buffering';
 import { ProfesoresComponent } from './profesores/profesores.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { MatPaginatorModule, MatSortModule, MatTableModule } from '@angular/material';
+import { AlumnosComponent } from './alumnos/alumnos.component';
 
 @NgModule({
   imports: [
@@ -83,7 +84,8 @@ import { MatPaginatorModule, MatSortModule, MatTableModule } from '@angular/mate
     SlideToggleComponent,
     VideitosComponent,
     SubirVideosComponent,
-    ProfesoresComponent  
+    ProfesoresComponent,
+    AlumnosComponent  
   ]
 })
 
