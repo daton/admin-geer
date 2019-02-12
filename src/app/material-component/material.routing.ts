@@ -21,6 +21,8 @@ import { VideitosComponent } from './videitos/videitos.component';
 import { SubirVideosComponent } from './subir-videos/subir-videos.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
 import { AlumnosComponent } from './alumnos/alumnos.component';
+import { ActivarExamenComponent } from './activar-examen/activar-examen.component';
+import { SubirAndamiosComponent } from './subir-andamios/subir-andamios.component';
 
 
 export const MaterialRoutes: Routes = [
@@ -32,10 +34,18 @@ export const MaterialRoutes: Routes = [
 path:'alumnos',
 component:AlumnosComponent
 },
+{
+path:'activar-examen',
+component:ActivarExamenComponent
+},
 
       {
         path: 'subir-videos',
         component: SubirVideosComponent
+      },
+      {
+     path:'subir-andamios',
+     component:SubirAndamiosComponent
       },
       {
   path:'profesores',

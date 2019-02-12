@@ -40,6 +40,8 @@ import { ProfesoresComponent } from './profesores/profesores.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { MatPaginatorModule, MatSortModule, MatTableModule } from '@angular/material';
 import { AlumnosComponent } from './alumnos/alumnos.component';
+import { ActivarExamenComponent } from './activar-examen/activar-examen.component';
+import { SubirAndamiosComponent } from './subir-andamios/subir-andamios.component';
 
 @NgModule({
   imports: [
@@ -85,7 +87,9 @@ import { AlumnosComponent } from './alumnos/alumnos.component';
     VideitosComponent,
     SubirVideosComponent,
     ProfesoresComponent,
-    AlumnosComponent  
+    AlumnosComponent,
+    ActivarExamenComponent,
+    SubirAndamiosComponent  
   ]
 })
 

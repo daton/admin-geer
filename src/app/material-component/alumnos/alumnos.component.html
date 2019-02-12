@@ -47,7 +47,10 @@
                       </mat-row>
                   </mat-table>
 
-                  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+                  <mat-paginator #paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>
               </div>
           </mat-card-content>
       </mat-card>
@@ -63,7 +66,7 @@ MOSTRAR LOS GRUPOS
       <mat-card>
           <mat-card-content>
               <mat-card-title>Listas de alumnos</mat-card-title>
-              <p>Puedes filtrar escribieno el nombre del alumno para reducir la búsqueda, ordenando con las flechas dl encabezado de la tabla</p>
+              <p>Puedes filtrar escribieno el apellido paterno del alumno, o bien su nombre, para reducir la búsqueda</p>
               <div class="bg-light p-10 p-r-20 p-l-20">
                   <mat-form-field>
                       <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtrar">
@@ -107,7 +110,7 @@ MOSTRAR LOS GRUPOS
                       </mat-row>
                   </mat-table>
 
-                  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+                 
               </div>
           </mat-card-content>
       </mat-card>

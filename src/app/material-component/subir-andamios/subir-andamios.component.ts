@@ -1,3 +1,4 @@
+
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {FormControl, Validators} from '@angular/forms';
@@ -5,18 +6,19 @@ import { FileUploader, FileUploaderOptions } from 'ng2-file-upload';
 import {MatSelectModule} from '@angular/material/select';
 
 
+
 @Component({
-  selector: 'app-subir-videos',
-  templateUrl: './subir-videos.component.html',
-  styleUrls: ['./subir-videos.component.css']
+  selector: 'app-subir-andamios',
+  templateUrl: './subir-andamios.component.html',
+  styleUrls: ['./subir-andamios.component.css']
 })
-export class SubirVideosComponent implements AfterViewInit{
+export class SubirAndamiosComponent implements AfterViewInit{
   public hasBaseDropZoneOver:boolean = false;
   public materia:string="yooo";
   public bloque:string="tuuu";
   public curso:string="eeeel";
   public hasAnotherDropZoneOver:boolean = false;
- //URL = 'http://192.168.100.7:9000/api/archivaldo';
+ //URL = 'http://192.168.100.7:8080/api/archivaldo';
  URL = 'https://daton.herokuapp.com/api/archivaldo';
 
  public uploader:FileUploader = new FileUploader({url: this.URL});
@@ -35,12 +37,9 @@ bloques = [
 
 ];
 cursos = [
-  {value: 'excel', viewValue: 'Excel'},
-  {value: 'word', viewValue: 'Word'},
-  {value: 'internet', viewValue: 'Internet'},
-  {value: 'power', viewValue: 'Power Point'},
-  {value: 'programacion', viewValue: 'Programación'},
-  {value: 'scracht', viewValue: 'Introducción a scratch'}
+  {value: 'profesor', viewValue: 'Profesor'},
+  {value: 'alumno', viewValue: 'Alumno'},
+
 ];
  public constructor(){
  

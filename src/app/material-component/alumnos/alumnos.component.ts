@@ -16,7 +16,7 @@ export class AlumnosComponent implements OnInit {
   dataSource: MatTableDataSource<Profesor>;
   dataSourceAlumnos:MatTableDataSource<Alumno>;
    users: Profesor[] = [];
-   usersAlumnos:Alumno[];
+   usersAlumnos:Alumno[]=[];
    claveProfesor=''
 
    mostrarProfesores=true
@@ -24,6 +24,9 @@ export class AlumnosComponent implements OnInit {
 color='blue'
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
+
+
+
 
  
 
@@ -36,6 +39,7 @@ color='blue'
     console.log("La es esta  url" + estaUrl);
     this.http.get<any[]>(estaUrl).subscribe(respuesta => { this.users = respuesta });
     this.dataSource = new MatTableDataSource(this.users);
+   
 
 
    // this.rows = data;
@@ -51,30 +55,13 @@ color='blue'
 
    }
 
-   cargarAlumnos(){
-    let estaUrl: string = Globales.urlBase + "/alumno/clave-profesor/"+this.claveProfesor;
-    console.log("La es esta  url" + estaUrl);
-    this.http.get<any[]>(estaUrl).subscribe(respuesta => { this.usersAlumnos = respuesta });
-    this.dataSourceAlumnos = new MatTableDataSource(this.usersAlumnos);
-
-
-   // this.rows = data;
-   // this.temp = [...data];
-    setTimeout(() => {
-         // Assign the data to the data source for the table to render
-         this.dataSourceAlumnos = new MatTableDataSource(this.usersAlumnos);
-         this.dataSourceAlumnos.paginator = this.paginator;
-         this.dataSourceAlumnos.sort = this.sort;
-
-    }, 1500);
-   }
-
+  
   ngOnInit() {
 
   }
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
+   // this.dataSource.paginator = this.paginator;
+  //  this.dataSource.sort = this.sort;
   }
 
   applyFilter(filterValue: string) {
@@ -88,10 +75,28 @@ color='blue'
   }
   obtenerClave(valor:string){
     console.log(" jajajaja"+ valor);
-    this.claveProfesor=valor;
-    this.mostrarProfesores=false;
-    this.mostrarGrupos=true;
-    this.cargarAlumnos();
+  this.claveProfesor=valor;
+
+    
+console.log("perrra "+Globales.urlBase + "/alumno/clave-profesor/"+valor)
+    this.http.get<Alumno[]>(Globales.urlBase + "/alumno/clave-profesor/"+valor).subscribe(respuesta => { this.usersAlumnos = respuesta });
+  
+
+
+   // this.rows = data;
+   // this.temp = [...data];
+    setTimeout(() => {
+         // Assign the data to the data source for the table to render
+         console.log("MIS ALUMNOS BUSCADOS "+JSON.stringify(this.usersAlumnos));
+         this.dataSourceAlumnos = new MatTableDataSource(this.usersAlumnos);
+     
+         this.dataSourceAlumnos.sort = this.sort;
+     
+         this.claveProfesor=valor;
+         this.mostrarProfesores=false;
+         this.mostrarGrupos=true;
+
+    }, 1900);
   }
   nuevaBusqueda(){
    this.cargarProfesores()

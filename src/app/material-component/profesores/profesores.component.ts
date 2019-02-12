@@ -12,7 +12,7 @@ declare var require: any;
   styleUrls: ['./profesores.component.css']
 })
 export class ProfesoresComponent implements OnInit, AfterViewInit {
-  displayedColumns = ['clave', 'email', 'nombre', 'paterno'];
+  displayedColumns = ['clave','password', 'email', 'nombre', 'paterno'];
   dataSource: MatTableDataSource<Profesor>;
    users: Profesor[] = [];
 color='blue'

@@ -22,6 +22,12 @@
                                 
                               </mat-cell>
                         </ng-container>
+
+                          <!-- Progress Column -->
+                          <ng-container matColumnDef="password">
+                            <mat-header-cell *matHeaderCellDef mat-sort-header>Password</mat-header-cell>
+                            <mat-cell *matCellDef="let row"> {{row.password}}</mat-cell>
+                        </ng-container>
   
                         <!-- Progress Column -->
                         <ng-container matColumnDef="email">

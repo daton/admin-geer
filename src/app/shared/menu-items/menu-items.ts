@@ -37,13 +37,15 @@ const MENUITEMS = [
         type: 'sub',
         icon: 'bubble_chart',
         badge: [
-            {type: 'red', value: '4'}
+            {type: 'red', value: '5'}
         ],
         children: [
           {state:'subir-videos',name:'Subir videos'},
+          {state:'subir-andamios',name:'Subir andamios'},
             {state: 'videos', name: 'Mis Videos'},
             {state: 'profesores', name:'Mis profesores'},
-            {state:'alumnos', name:'Listas de alumnos'}
+            {state:'alumnos', name:'Listas de alumnos'},
+            {state:'activar-examen',name:'Activar examen'}
          
             /*
             {state: 'button', name: 'Buttons'},
