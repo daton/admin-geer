@@ -60,28 +60,46 @@ cursos = [
       this.hasBaseDropZoneOver = e;
     }
     onFileSelected(){
+
+      this.materias = [
+        {value: 'info1', viewValue: 'Informática 1'},
+        {value: 'info2', viewValue: 'Informática 2'},
+        {value: 'info3', viewValue: 'Informática 3'},
+        {value: 'info4', viewValue: 'Informática 4'},
       
-console.log("asas")
+      ];
+      this.bloques = [
+        {value: 'bloque1', viewValue: 'Bloque 1'},
+        {value: 'bloque2', viewValue: 'Bloque 2'},
+        {value: 'bloque3', viewValue: 'Bloque 3'},
+      
+      ];
+      this.cursos = [
+        {value: 'profesor', viewValue: 'Profesor'},
+        {value: 'alumno', viewValue: 'Alumno'},
+      
+      ];
+      
+console.log("seleccionado")
+
+
+
     }
 
    
 
     public onChange($event:any):void {
 
-      /*
-      Con el siguiente codigo podmeos actualizar el form de submicion para que
-      acepte el otro prametroa adicional al del file y que llegue al servidor tambien
-      y cambien dinamicamente
-      *
+    
       this.uploader.onBuildItemForm=(fileItem: any, form: any) => {
         form.append('materia' , this.materia);
         form.append('bloque' , this.bloque);
         form.append('curso' , this.curso);
       
        };
-       */
+       
   
-      console.log("Se ha seleccionado el archivo  y nombre "+this.materia);
+      console.log("Si ha seleccionado el archivo  y nombre "+this.materia);
       console.log("url "+this.URL);
     //console.log("yayayayaya"+$event.srcElement.files[0].name);
 
