@@ -42,6 +42,8 @@ import { MatPaginatorModule, MatSortModule, MatTableModule } from '@angular/mate
 import { AlumnosComponent } from './alumnos/alumnos.component';
 import { ActivarExamenComponent } from './activar-examen/activar-examen.component';
 import { SubirAndamiosComponent } from './subir-andamios/subir-andamios.component';
+import { AdminclavesComponent } from './adminclaves/adminclaves.component';
+import { ModificarMaestroComponent } from './modificar-maestro/modificar-maestro.component';
 
 @NgModule({
   imports: [
@@ -89,7 +91,9 @@ import { SubirAndamiosComponent } from './subir-andamios/subir-andamios.componen
     ProfesoresComponent,
     AlumnosComponent,
     ActivarExamenComponent,
-    SubirAndamiosComponent  
+    SubirAndamiosComponent,
+    AdminclavesComponent,
+    ModificarMaestroComponent  
   ]
 })
 

@@ -5,7 +5,7 @@
   <div fxFlex.gt-sm="35" fxFlex.gt-xs="100" fxFlex="100">
 
           <mat-form-field>
-                  <mat-select placeholder="Selecciona la materia"  [(ngModel)]="materia">
+                  <mat-select placeholder="Selecciona la materia"  [(ngModel)]="materia"  (selectionChange)="cursoSeleccionado($event)"  >
                     <mat-option *ngFor="let mate of materias" [value]="mate.value">
                       {{ mate.viewValue }}
                     </mat-option>

@@ -56,7 +56,52 @@ cursos = [
        };
   
 
-    }    
+    }
+    
+    
+    cursoSeleccionado(event:any){
+      console.log("Seleccionaste algo "+event.value);
+      if(event.value=='info3'){
+        this.cursos = [
+          {value: 'excel', viewValue: 'Excel'},
+          {value: 'word', viewValue: 'Word'},
+    
+          {value: 'programacion', viewValue: 'Programación'},
+          {value: 'scracht', viewValue: 'Programación Scratch'}
+        ];
+      }
+      if(event.value=='info2'){
+        this.cursos = [
+          {value: 'internet', viewValue: 'Internet'},
+          {value: 'word', viewValue: 'Word'},
+    
+          {value: 'excel', viewValue: 'Excel'},
+          {value: 'power', viewValue: 'Power Point'}
+        ];
+      }
+      if(event.value=='info4'){
+        this.cursos = [
+          {value: 'word', viewValue: 'Word'},
+          {value: 'excel', viewValue: 'Excel'},
+    
+          {value: 'programacion', viewValue: 'Programación'},
+          {value: 'app-inventor', viewValue: 'App Inventor'}
+        ];
+      }
+      
+      if(event.value=='info1'){
+        this.cursos = [
+          {value: 'excel', viewValue: 'Excel'},
+          {value: 'word', viewValue: 'Word'},
+          {value: 'internet', viewValue: 'Internet'},
+          {value: 'power', viewValue: 'Power Point'},
+          {value: 'programacion', viewValue: 'Programación'}
+        ];
+      
+      }
+      
+    }
+
     public fileOverBase(e:any):void {
       this.hasBaseDropZoneOver = e;
     }

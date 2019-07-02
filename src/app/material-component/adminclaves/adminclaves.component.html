@@ -1,0 +1,63 @@
+<div fxLayout="row" fxLayoutWrap="wrap"  *ngIf="mostrarProfesores">
+  <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+      <mat-card>
+          <mat-card-content>
+              <mat-card-title>Lista de claves registradas</mat-card-title>
+              <p>Primero buscar y selecciona una clave. Puedes filtrar escribiendo la clave, la clave del profesor o el correo, para reducir la búsqueda, en la parte inferior derecha se muestra el número total de claves.</p>
+              <button   type="button" mat-raised-button color="primary"  (click)="cargarLista()" >Cargar claves</button>
+              <div class="bg-light p-10 p-r-20 p-l-20">
+                  <p *ngIf="cargando">Cargando datos, esta operación puede tardar un poco...</p>
+                  <p>Registrados:{{registrados}}</p>
+                  <mat-form-field>
+                      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtrar">
+                  </mat-form-field>
+              </div>
+              
+              <div class="table-rasponsive" *ngIf="mostrarTabla">
+                  <mat-table [dataSource]="dataSource" matSort>
+
+                      <!-- ID Column -->
+                      <ng-container matColumnDef="clave">
+                          <mat-header-cell *matHeaderCellDef mat-sort-header>Clave del libro</mat-header-cell>
+                          <mat-cell *matCellDef="let row">
+                               
+                                            {{row.clave}}
+                                    
+                              
+                            </mat-cell>
+                      </ng-container>
+
+                      <!-- Progress Column -->
+                      <ng-container matColumnDef="email">
+                          <mat-header-cell *matHeaderCellDef mat-sort-header> Email</mat-header-cell>
+                          <mat-cell *matCellDef="let row"> {{row.email}}</mat-cell>
+                      </ng-container>
+
+                      <!-- Name Column -->
+                      <ng-container matColumnDef="password">
+                          <mat-header-cell *matHeaderCellDef mat-sort-header> Password </mat-header-cell>
+                          <mat-cell *matCellDef="let row"  [style.color]="color"  > {{row.password}} </mat-cell>
+                      </ng-container>
+
+                      <!-- Color Column -->
+                      <ng-container matColumnDef="claveProfesor">
+                          <mat-header-cell *matHeaderCellDef mat-sort-header>Profesor </mat-header-cell>
+                          <mat-cell *matCellDef="let row" > {{row.claveProfesor}} </mat-cell>
+                      </ng-container>
+
+                      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                      <mat-row *matRowDef="let row; columns: displayedColumns;">
+                      </mat-row>
+                  </mat-table>
+
+                  <mat-paginator #paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>
+              </div>
+          </mat-card-content>
+      </mat-card>
+  </div>
+</div>
+
+

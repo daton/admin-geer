@@ -37,17 +37,19 @@ const MENUITEMS = [
         type: 'sub',
         icon: 'bubble_chart',
         badge: [
-            {type: 'red', value: '5'}
+            {type: 'red', value: '6'}
         ],
         children: [
+          {state:'adminclaves',name:'Claves registradas'},
+          {state:'alumno-profesor',name:'Modificar Alumno'},
           {state:'subir-videos',name:'Subir videos'},
           {state:'subir-andamios',name:'Subir andamios'},
             {state: 'videos', name: 'Mis Videos'},
             {state: 'profesores', name:'Mis profesores'},
             {state:'alumnos', name:'Listas de alumnos'},
-            {state:'activar-examen',name:'Activar examen'}
+          /*  {state:'activar-examen',name:'Activar examen'}
          
-            /*
+            
             {state: 'button', name: 'Buttons'},
             {state: 'cards', name: 'Cards'},
             {state: 'grid', name: 'Grid List'},

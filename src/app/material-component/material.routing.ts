@@ -23,6 +23,8 @@ import { ProfesoresComponent } from './profesores/profesores.component';
 import { AlumnosComponent } from './alumnos/alumnos.component';
 import { ActivarExamenComponent } from './activar-examen/activar-examen.component';
 import { SubirAndamiosComponent } from './subir-andamios/subir-andamios.component';
+import { AdminclavesComponent } from './adminclaves/adminclaves.component';
+import { ModificarMaestroComponent } from './modificar-maestro/modificar-maestro.component';
 
 
 export const MaterialRoutes: Routes = [
@@ -33,6 +35,16 @@ export const MaterialRoutes: Routes = [
 {
 path:'alumnos',
 component:AlumnosComponent
+},
+
+{
+  path:'alumno-profesor',
+  component:ModificarMaestroComponent
+}
+,
+{
+ path:'adminclaves',
+ component:AdminclavesComponent
 },
 {
 path:'activar-examen',
